@@ -1,11 +1,25 @@
-section
-{
+.* {
 	display: flex
 	margin: auto
 }
 
-header
-{
+header {
 	display: flex
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+figure {
+	display: flex;
+}
+
+footer {
+	display: flex;
 }
 
