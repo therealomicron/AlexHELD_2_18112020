@@ -24,14 +24,17 @@ header {
 	align-items: flex-start;
 	align-content: space-around;
 	justify-content: space-around;
+	height: 800px;
 }
 
 section#left {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	max-width: 60%;
 	background-color: #f2f2f2;
+	height: inherit;
+	border-radius: 25px;
 }
 
 section#right {
@@ -39,7 +42,11 @@ section#right {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: flex-start;
+	align-content: space-around;
 	max-width: 30%;
+	height: inherit;
+	border-radius: 25px;
 }
 
 div#Resultats {
@@ -48,36 +55,45 @@ div#Resultats {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
+	height: inherit;
 }
 
-img {
-	width: 128px;
-	height: 64px;
+figure.res > img {
+	max-width: 100%;
+	max-height: 100px;
 	overflow: hidden;
+	object-fit: cover;
 	border-top-right-radius: inherit;
 	border-top-left-radius: inherit;
 }
 
-#top {
-	display: flex;
-	flex-direction: column;
-	max-width: 30%;
+figure.sug > img { 
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	object-fit: cover;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
 }
 
 figure.res {
 	display: flex;
 	flex-direction: column;
-	max-width: 128px;
+	max-width: 25%;
 	height: auto;
 	flex-wrap: wrap;
 	margin: 32px;
 }
 
-figure.top {
+figure.sug {
 	display: flex;
 	flex-direction: row;
-	max-width: 100%;
-	height: auto;
-	flex-wrap: wrap;
+	width: 66%;
+	height: 33%;
+	
 }
 
+figure.sug > figcaption {
+	height: 100px;
+	overflow: hidden;
+}
