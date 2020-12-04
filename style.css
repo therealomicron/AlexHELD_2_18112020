@@ -1,3 +1,11 @@
+@font-face {
+	font-family: Raleway;
+	src: url(police/Raleway-VariableFont_wght.ttf)
+}
+
+* {
+	font: Raleway;
+}
 footer {
 	display: flex;
 	justify-content: space-around;
@@ -14,8 +22,15 @@ figure {
 
 header {
 	display: flex;
-	justify-content: right;
+	justify-content: space-between;
 	flex-direction: row;
+	align-items: flex-end;
+	align-content: space-between;
+}
+
+header > img {
+	width: 10%;
+	height: auto;
 }
 
 #mainbody {
@@ -43,7 +58,7 @@ section#right {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	align-content: space-around;
+	align-content: space-between;
 	max-width: 30%;
 	height: inherit;
 	border-radius: 25px;
@@ -58,6 +73,23 @@ div#Resultats {
 	height: inherit;
 }
 
+div#Resultats > a {
+	display: block;
+	flex-grow: 1;
+	max-width: 33%;
+}
+
+div#Top {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-height: 100%;
+}
+
+div#Top > a {
+	display: block;
+}
+
 figure.res > img {
 	max-width: 100%;
 	max-height: 100px;
@@ -68,9 +100,8 @@ figure.res > img {
 }
 
 figure.sug > img { 
-	width: 100px;
-	height: 100px;
-	overflow: hidden;
+	max-width: 50%;
+	max-height: 100%;
 	object-fit: cover;
 	border-top-left-radius: inherit;
 	border-bottom-left-radius: inherit;
@@ -79,7 +110,7 @@ figure.sug > img {
 figure.res {
 	display: flex;
 	flex-direction: column;
-	max-width: 25%;
+	max-width: 100%;
 	height: auto;
 	flex-wrap: wrap;
 	margin: 32px;
@@ -88,12 +119,18 @@ figure.res {
 figure.sug {
 	display: flex;
 	flex-direction: row;
-	width: 66%;
-	height: 33%;
+	width: 80%;
+	height: 25%;
 	
 }
 
 figure.sug > figcaption {
-	height: 100px;
+	height: 100%; 
+	max-width: 50%;
 	overflow: hidden;
+}
+
+section.Activities {
+	display: grid;
+	grid
 }
