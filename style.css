@@ -41,7 +41,7 @@ section#right {
 	background-color: #f2f2f2;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: space-around;
 	max-width: 30%;
