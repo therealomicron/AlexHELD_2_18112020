@@ -116,6 +116,10 @@ figure.res {
 	margin: 32px;
 }
 
+figure.res > figcaption {
+	height: 150px;
+}
+
 figure.sug {
 	display: flex;
 	flex-direction: row;
@@ -132,5 +136,72 @@ figure.sug > figcaption {
 
 section.Activities {
 	display: grid;
-	grid
+}
+
+#search {
+	display:flex;
+	align-content: center;
+}
+input {
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+}
+
+button {
+	height: 40px;
+	width: 40px;
+	margin: 0px;
+	padding: 0px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+#searchbutton {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	width: 100px;
+	background-color: #0065fc;
+}
+
+#filterbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.sliders {
+	display: flex;
+	background-color: white;
+	width: 15%;
+	height: 40px;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 15px;
+	border-style: solid;
+	border-color: #f2f2f2;
+}
+
+.sliders > figcaption {
+	background-color: white;
+}
+.sliders:hover {
+	flex-direction: row-reverse;
+	padding-left: 15px;
+	padding-right: 0px;	
+}
+
+figure > i {
+	color: #0065fc;
+	border-radius: 50%;
+	background-color: #f2f2f2;
+	padding: 15px;
+}
+
+.far.fa-star {
+	color: #f2f2f2;
+}
+
+.fas.fa-star {
+	color: #0065fc;
 }
