@@ -11,6 +11,10 @@ h4 {
 	margin-left: 35px;
 	font-size: 1.3em;
 }
+
+h5 {
+	margin-left: 35px;
+}
 footer {
 	display: flex;
 	justify-content: space-around;
@@ -217,7 +221,32 @@ figure.sug > figcaption {
 	overflow: hidden;
 }
 
-section.Activities {
+#Activities {
 	display: grid;
 	grid: auto auto auto auto auto auto auto auto/25% 25% 25% 25%
+}
+
+#Activities:nth-child(1n) {
+	grid-row: 1 / span 7;
+	grid-column-start: 1;
+}
+#Activities:nth-child(2n) {
+	grid-row: 1 / span 4;
+	grid-column-start: 2;
+}
+#Activities:nth-child(3n) {
+	grid-row: 6 / span 2;
+	grid-column-start: 2;
+}
+#Activities:nth-child(4n) {
+	grid-row: 1 / span 7;
+	grid-column-start: 3;
+}
+#Activities:nth-child(5n) {
+	grid-row: 1 / span 3;
+	grid-column-start: 4;
+}
+#Activities:nth-child(6n) {
+	grid-row: 5 / span 3;
+	grid-column-start: 4;
 }
