@@ -64,6 +64,12 @@ header > img {
 	height: auto;
 }
 
+#Recherche {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 #search {
 	display:flex;
 	align-content: center;
@@ -164,16 +170,10 @@ section#left {
 	border-radius: 25px;
 }
 
-section#right {
-	background-color: #f2f2f2;
+#left > .label {
 	display: flex;
-	flex-direction: column;
 	justify-content: flex-start;
-	align-items: flex-start;
-	align-content: space-between;
-	max-width: 30%;
-	height: inherit;
-	border-radius: 25px;
+	padding-left: 35px;
 }
 
 div#Resultats {
@@ -194,17 +194,18 @@ div#Resultats > a {
 div#Resultats:nth-child(3n) {
 	break-after: always;
 }
-div#Top {
+
+figure.res {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	max-height: 100%;
-}
-
-div#Top > a {
-	display: block;
-	overflow: hidden;
-	height: 33%;
+	max-width: 100%;
+	height: auto;
+	flex-wrap: wrap;
+	margin: 32px;
+	padding: 3px;
+	box-shadow: 0px 0px 4px 0px #e8e7e6/*,  1px 1px 4px 0px #e8e7e6, -1px 1px 4px 0px #e8e7e6*/;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 figure.res > img {
@@ -216,7 +217,40 @@ figure.res > img {
 	border-top-left-radius: inherit;
 }
 
+figure.res > figcaption {
+	height: 150px;
+}
 
+div#Top {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-height: 100%;
+}
+
+#right > .label {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: baseline;
+	width: 100%;
+}
+
+.label > i {
+	display: block;
+}
+
+.label > h4 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+}
+
+h4 > p {
+	display: block;
+}
 figure.res {
 	display: flex;
 	flex-direction: column;
@@ -225,10 +259,40 @@ figure.res {
 	flex-wrap: wrap;
 	margin: 32px;
 	padding: 3px;
+	box-shadow: 0px 1px 4px 0px #e8e7e6,  1px 1px 4px 0px #e8e7e6, -1px 1px 4px 0px #e8e7e6;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+div#Top > a {
+	display: block;
+	overflow: hidden;
+	height: 33%;
+	width: auto;
 }
 
-figure.res > figcaption {
-	height: 150px;
+section#right {
+	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: space-between;
+	max-width: 30%;
+	height: inherit;
+	border-radius: 25px;
+}
+
+figure.sug {
+	display: flex;
+	flex-direction: row;
+	height: 90%;
+	width: auto;
+	flex-grow: 1;
+	overflow: hidden;
+	padding: 3px;
+	box-shadow: 0px 1px 4px 0px #e8e7e6,  1px 1px 4px 0px #e8e7e6, -1px 1px 4px 0px #e8e7e6;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 figure.sug > img { 
@@ -238,26 +302,22 @@ figure.sug > img {
 	border-top-left-radius: inherit;
 	border-bottom-left-radius: inherit;
 	overflow: hidden;
-	padding: 1px;
-}
-
-figure.sug {
-	display: flex;
-	flex-direction: row;
-	max-width: auto;
-	height: 95%;
-	flex-grow: 1;
-	overflow: hidden;
-	padding: 3px;
 }
 
 figure.sug > figcaption {
 	height: 100%; 
-	max-width: 50%;
+	width: 50%;
 	overflow: hidden;
 }
 
 #Activities {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-content: flex-start;
+}
+
+#icon_container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -269,13 +329,19 @@ figure.sug > figcaption {
 	max-width: 100%;
 }
 
+#Activities > .label {
+	width: 100%;
+	padding-left: 35px;
+	padding-top: 25px;
+}
+
 a.att {
 	display: block;
 	object-fit: cover;
 	margin: 0px;
 }
 
-#Activities > div {
+#icon_container > div {
 	display: flex;
 	height: 500px;
 	width: 100%;
@@ -322,6 +388,9 @@ figure.att {
 	padding: 0px;
 	margin: 0px;
 	border-radius: 15px;
+	box-shadow: 0px 1px 4px 0px #f2f2f2/*,  1px 1px 4px 0px #f2f2f2, -1px 1px 4px 0px #f2f2f2*/;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 img.att {
@@ -338,7 +407,4 @@ figcaption.att {
 	height: 50px;
 	width: 100%;
 	z-index: 1;
-	box-shadow: 0px 1px 4px 0px #f2f2f2,  1px 1px 4px 0px #f2f2f2, -1px 1px 4px 0px #f2f2f2;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
 }
