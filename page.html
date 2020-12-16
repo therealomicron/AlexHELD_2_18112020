@@ -5,14 +5,15 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="https://kit.fontawesome.com/974a47a886.js" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
 		<header>
 			<img id="logo" src="images/logo/pReservia.png" alt="Reservia logo"/>
 			<nav>
-				<a href="#">Hébergements</a>
-				<a href="#">Activités</a>
+				<a href="#mainbody">Hébergements</a>
+				<a href="#Activities">Activités</a>
 				<a href="#">S'inscrire</a>
 			</nav>
 		</header>
@@ -23,7 +24,7 @@
 				<button id="localisation">
 					<i class="fas fa-map-marker-alt"></i>
 				</button>
-				<input id="textbox" type="text" />
+				<input id="textbox" type="text" value="Marseille, France"/>
 				<input id="searchbutton" type="submit" value="Rechercher" />
 			</figure>
 			<div id="filterbar">
@@ -45,8 +46,8 @@
 				</figure>
 			</div>
 		</section>
-		<div id="mainbody">
-		
+
+		<div id="mainbody">		
 			<section id="left">
 				<div class="label">
 					<h3>Hébergements à Marseille</h3>

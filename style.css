@@ -27,6 +27,9 @@ strong {
 	font-weight: bold;
 }
 
+.label {
+	box-sizing: border-box;
+}
 
 p {
 			   
@@ -36,6 +39,10 @@ a {
 	text-decoration-style: initial;
 	text-decoration-color: black; 
 	text-decoration-line: none;              
+}
+
+p > a {
+	color: black;
 }
 footer {
 	display: flex;
@@ -57,8 +64,35 @@ header {
 	flex-direction: row;
 	align-items: flex-end;
 	align-content: space-between;
+	margin: 35px;
 }
 
+header > nav {
+	display: flex;
+}
+
+nav > a {
+	display: block;
+	margin: 10px;
+	height: 30px;
+	color: #0065fc;
+	padding-top: 30px;
+}
+
+nav > a:nth-child(3) {
+	color: black;
+}
+
+nav > a:hover {
+	border-top: #0065fc;
+	border-style: solid;
+	border-left: white;
+	border-right: white;
+	border-bottom: white;
+}
+nav > a:nth-child(3):hover {
+	border-top: white;
+}
 header > img {
 	width: 10%;
 	height: auto;
@@ -68,6 +102,14 @@ header > img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+#Recherche > h4 {
+	margin-left: 35px;
+}
+
+#Recherche > h5 {
+	margin-left: 35px;
 }
 
 #search {
@@ -114,7 +156,6 @@ button {
 .sliders {
 	display: flex;
 	background-color: white;
-	width: 15%;
 	height: 40px;
 	justify-content: space-between;
 	align-items: center;
@@ -126,6 +167,7 @@ button {
 
 .sliders > figcaption {
 	background-color: white;
+	padding-left: 10px;
 }
 .sliders:hover {
 	flex-direction: row-reverse;
@@ -218,7 +260,7 @@ figure.res > img {
 }
 
 figure.res > figcaption {
-	height: 150px;
+	height: 110px;
 }
 
 div#Top {
@@ -330,9 +372,9 @@ figure.sug > figcaption {
 }
 
 #Activities > .label {
-	width: 100%;
 	padding-left: 35px;
 	padding-top: 25px;
+
 }
 
 a.att {
