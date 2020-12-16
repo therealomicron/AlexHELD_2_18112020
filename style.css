@@ -3,8 +3,46 @@
 	src: url(police/Raleway-VariableFont_wght.ttf)
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+}
 * {
-	font: Raleway;
+	font-family: Raleway;
+}
+
+figcaption > p {
+	padding-left: 15px;
+}
+/*
+.label > h4 {
+	margin-left: 35px;
+	font-size: 1.3em;
+}
+h5 {
+	margin-left: 35px;
+}
+*/
+strong {
+	font-weight: bold;
+}
+
+.label {
+	box-sizing: border-box;
+}
+
+p {
+			   
+	color: black;
+}
+a {
+	text-decoration-style: initial;
+	text-decoration-color: black; 
+	text-decoration-line: none;              
+}
+
+p > a {
+	color: black;
 }
 footer {
 	display: flex;
@@ -26,13 +64,135 @@ header {
 	flex-direction: row;
 	align-items: flex-end;
 	align-content: space-between;
+	margin: 35px;
 }
 
+header > nav {
+	display: flex;
+}
+
+nav > a {
+	display: block;
+	margin: 10px;
+	height: 30px;
+	color: #0065fc;
+	padding-top: 30px;
+}
+
+nav > a:nth-child(3) {
+	color: black;
+}
+
+nav > a:hover {
+	border-top: #0065fc;
+	border-style: solid;
+	border-left: white;
+	border-right: white;
+	border-bottom: white;
+}
+nav > a:nth-child(3):hover {
+	border-top: white;
+}
 header > img {
 	width: 10%;
 	height: auto;
 }
 
+#Recherche {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#Recherche > h4 {
+	margin-left: 35px;
+}
+
+#Recherche > h5 {
+	margin-left: 35px;
+}
+
+#search {
+	display:flex;
+	align-content: center;
+}
+input {
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	border-left: none;
+	border-right: none;
+	border-top: solid;
+	border-bottom: solid;
+	border-color: #f2f2f2;
+}
+
+button {
+	height: 44px;
+	width: 40px;
+	margin: 0px;
+	padding: 0px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+#searchbutton {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	width: 100px;
+	height: 44px;
+	color: white;
+	background-color: #0065fc;
+	border: solid;
+	border-color: #0065fc;
+}
+
+#filterbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.sliders {
+	display: flex;
+	background-color: white;
+	height: 40px;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 15px;
+	border-style: solid;
+	border-color: #f2f2f2;
+	border-left: none;
+}
+
+.sliders > figcaption {
+	background-color: white;
+	padding-left: 10px;
+}
+.sliders:hover {
+	flex-direction: row-reverse;
+	padding-left: 15px;
+	padding-right: 0px;	
+	border-right: none;
+	border-left: solid;
+	border-color: #f2f2f2;
+}
+
+figure > i {
+	color: #0065fc;
+	border-radius: 50%;
+	background-color: #DEEBFF;
+	padding: 15px;
+}
+
+.far.fa-star {
+	color: #f2f2f2;
+	font-weight: 900;
+}
+
+.fas.fa-star {
+	color: #0065fc;
+}
 #mainbody {
 	display: flex;
 	flex-direction: row;
@@ -52,16 +212,10 @@ section#left {
 	border-radius: 25px;
 }
 
-section#right {
-	background-color: #f2f2f2;
+#left > .label {
 	display: flex;
-	flex-direction: column;
 	justify-content: flex-start;
-	align-items: flex-start;
-	align-content: space-between;
-	max-width: 30%;
-	height: inherit;
-	border-radius: 25px;
+	padding-left: 35px;
 }
 
 div#Resultats {
@@ -76,18 +230,24 @@ div#Resultats {
 div#Resultats > a {
 	display: block;
 	flex-grow: 1;
-	max-width: 33%;
+	width: 33%;
 }
 
-div#Top {
+div#Resultats:nth-child(3n) {
+	break-after: always;
+}
+
+figure.res {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	max-height: 100%;
-}
-
-div#Top > a {
-	display: block;
+	max-width: 100%;
+	height: auto;
+	flex-wrap: wrap;
+	margin: 32px;
+	padding: 3px;
+	box-shadow: 0px 0px 4px 0px #e8e7e6/*,  1px 1px 4px 0px #e8e7e6, -1px 1px 4px 0px #e8e7e6*/;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 figure.res > img {
@@ -99,14 +259,40 @@ figure.res > img {
 	border-top-left-radius: inherit;
 }
 
-figure.sug > img { 
-	max-width: 50%;
-	max-height: 100%;
-	object-fit: cover;
-	border-top-left-radius: inherit;
-	border-bottom-left-radius: inherit;
+figure.res > figcaption {
+	height: 110px;
 }
 
+div#Top {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-height: 100%;
+}
+
+#right > .label {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: baseline;
+	width: 100%;
+}
+
+.label > i {
+	display: block;
+}
+
+.label > h4 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+}
+
+h4 > p {
+	display: block;
+}
 figure.res {
 	display: flex;
 	flex-direction: column;
@@ -114,94 +300,153 @@ figure.res {
 	height: auto;
 	flex-wrap: wrap;
 	margin: 32px;
+	padding: 3px;
+	box-shadow: 0px 1px 4px 0px #e8e7e6,  1px 1px 4px 0px #e8e7e6, -1px 1px 4px 0px #e8e7e6;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+div#Top > a {
+	display: block;
+	overflow: hidden;
+	height: 33%;
+	width: auto;
 }
 
-figure.res > figcaption {
-	height: 150px;
+section#right {
+	background-color: #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: space-between;
+	max-width: 30%;
+	height: inherit;
+	border-radius: 25px;
 }
 
 figure.sug {
 	display: flex;
 	flex-direction: row;
-	width: 80%;
-	height: 25%;
-	
+	height: 90%;
+	width: auto;
+	flex-grow: 1;
+	overflow: hidden;
+	padding: 3px;
+	box-shadow: 0px 1px 4px 0px #e8e7e6,  1px 1px 4px 0px #e8e7e6, -1px 1px 4px 0px #e8e7e6;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+figure.sug > img { 
+	width: 50%;
+	height: 100%;
+	object-fit: cover;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+	overflow: hidden;
 }
 
 figure.sug > figcaption {
 	height: 100%; 
-	max-width: 50%;
+	width: 50%;
 	overflow: hidden;
 }
 
-section.Activities {
-	display: grid;
+#Activities {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-content: flex-start;
 }
 
-#search {
-	display:flex;
-	align-content: center;
-}
-input {
-	height: 40px;
-	margin: 0px;
-	padding: 0px;
-}
-
-button {
-	height: 40px;
-	width: 40px;
-	margin: 0px;
-	padding: 0px;
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
-}
-
-#searchbutton {
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
-	width: 100px;
-	background-color: #0065fc;
-}
-
-#filterbar {
+#icon_container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	height: 500px;
+	margin: 35px;
+	justify-content: space-around;
+	align-content: space-around;
+	align-items: flex-start;
+	max-width: 100%;
 }
 
-.sliders {
+#Activities > .label {
+	padding-left: 35px;
+	padding-top: 25px;
+
+}
+
+a.att {
+	display: block;
+	object-fit: cover;
+	margin: 0px;
+}
+
+#icon_container > div {
 	display: flex;
-	background-color: white;
-	width: 15%;
-	height: 40px;
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
-	padding-right: 15px;
-	border-style: solid;
-	border-color: #f2f2f2;
+	margin: 5px;
 }
 
-.sliders > figcaption {
-	background-color: white;
-}
-.sliders:hover {
-	flex-direction: row-reverse;
-	padding-left: 15px;
-	padding-right: 0px;	
+#col1 > a.att {
+	height: 100%;
+	width: 100%;
 }
 
-figure > i {
-	color: #0065fc;
-	border-radius: 50%;
-	background-color: #f2f2f2;
-	padding: 15px;
+#col2 > a.att:nth-child(1) {
+	height: 60%;
+	width: 100%;
 }
 
-.far.fa-star {
-	color: #f2f2f2;
+#col2 > a.att:nth-child(2) {
+	height: 30%;
+	width: 100%;
 }
 
-.fas.fa-star {
-	color: #0065fc;
+#col3 > a.att{
+	height: 100%;
+	width: 100%;
+}
+
+#col4 > a.att:nth-child(1) {
+	height: 45%;
+	width: 100%;
+}
+
+#col4 > a.att:nth-child(2) {
+	height: 45%;
+	width: 100%;
+}
+figure.att {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	border-radius: 15px;
+	box-shadow: 0px 1px 4px 0px #f2f2f2/*,  1px 1px 4px 0px #f2f2f2, -1px 1px 4px 0px #f2f2f2*/;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+img.att {
+	object-fit: cover;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+figcaption.att {
+	height: 50px;
+	width: 100%;
+	z-index: 1;
 }

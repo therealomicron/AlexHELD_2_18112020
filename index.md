@@ -9,7 +9,7 @@
 
 	<body>
 		<header>
-			<img id="logo" src="images/logo/pReservia.png" />
+			<img id="logo" src="images/logo/pReservia.png" alt="Reservia logo"/>
 			<nav>
 				<a href="#">Hébergements</a>
 				<a href="#">Activités</a>
@@ -115,45 +115,45 @@
 				</div>
 		</section>
 					
-				<section id="right">
-					<div class="label">
-						<h4> Les plus populaires</h4>
-					</div>
-					<div id="Top">
-						<a href="#">
-							<figure class="sug">
-								<img src="images/hebergements/hotelsoleil.jpg" alt="A green hotel room" />
-								<figcaption>					
-									<p><strong>Hôtel Le soleil du matin</strong></p>
-									<p>Nuit à partir de 128€</p>
-									<p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-								</figcaption>
-							</figure>
-						</a >
-						<a href="#">
-							<figure class="sug">
-								<img src="images/hebergements/aucoeur.jpg" alt="Loft-style hotel" />
-								<figcaption>
-									<p><strong>Au coeur de l'eau Chambre d'hôtes</strong><p>
-									<p>Nuit à partir de 71€</p>
-									<p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
-								</figcaption>
-							</figure>
-						</a >
-						<a href="#">
-							<figure class="sug">
-								<img src="images/hebergements/hoteltoutbleu.jpg" alt="An all beige and brown hotel room" />
-								<figcaption>
-									<p><strong>Hôtel Tout bleu et Blanc</strong></p>
-									<p>Nuit à partir de 68€</p>
-									<p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
-								</figcaption>
-							</figure>
-						</a >
-					</div>
-				</section>
-			</div>
+			<section id="right">
+				<div class="label">
+					<h4> Les plus populaires</h4>
+				</div>
+				<div id="Top">
+					<a href="#">
+						<figure class="sug">
+							<img src="images/hebergements/hotelsoleil.jpg" alt="A green hotel room" />
+							<figcaption>					
+								<p><strong>Hôtel Le soleil du matin</strong></p>
+								<p>Nuit à partir de 128€</p>
+								<p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+							</figcaption>
+						</figure>
+					</a >
+					<a href="#">
+						<figure class="sug">
+							<img src="images/hebergements/aucoeur.jpg" alt="Loft-style hotel" />
+							<figcaption>
+								<p><strong>Au coeur de l'eau Chambre d'hôtes</strong><p>
+								<p>Nuit à partir de 71€</p>
+								<p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+							</figcaption>
+						</figure>
+					</a >
+					<a href="#">
+						<figure class="sug">
+							<img src="images/hebergements/hoteltoutbleu.jpg" alt="An all beige and brown hotel room" />
+							<figcaption>
+								<p><strong>Hôtel Tout bleu et Blanc</strong></p>
+								<p>Nuit à partir de 68€</p>
+								<p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></p>
+							</figcaption>
+						</figure>
+					</a >
+				</div>
+			</section>
 		</div>
+		
 
 		<section class="Activities" >
 			<a href="#">
