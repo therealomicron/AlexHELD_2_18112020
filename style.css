@@ -13,6 +13,7 @@ body {
 
 figcaption > p {
 	padding-left: 15px;
+	margin: 3px;
 }
 
 figcaption {
@@ -108,13 +109,14 @@ header > img {
 
 #Recherche > h5 {
 	margin-left: 35px;
+	font-weight: normal;
 }
 
 #search {
 	display:flex;
-	align-content: center;
 }
-input {
+
+#textbox { 
 	height: 40px;
 	margin: 0px;
 	padding: 0px;
@@ -125,7 +127,18 @@ input {
 	border-color: #f2f2f2;
 }
 
-button {
+#searchbutton {
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	border-left: none;
+	border-right: none;
+	border-top: solid;
+	border-bottom: solid;
+	border-color: #f2f2f2;
+}
+
+#localisation {
 	height: 44px;
 	width: 40px;
 	margin: 0px;
@@ -149,6 +162,16 @@ button {
 	border-style: inset;
 }
 
+#mobilesearch {
+	display: none; 
+	border-radius: 15px;
+	margin: 0px;
+	padding: 0px;
+	background-color:#0065fc;
+	color: white;
+	border: none;
+}
+
 ::placeholder {
 	font-weight: bold;
 	color: black;
@@ -159,6 +182,12 @@ button {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	align-items: baseline;
+}
+
+#filterbar > .label {
+	margin-left: 35px;
+	font-weight: bold;
 }
 
 .sliders {
@@ -201,6 +230,29 @@ figure > i {
 .fas.fa-star {
 	color: #0065fc;
 }
+
+.addendum {
+	margin-left: 35px;
+	display: flex;
+	flex-direction: row;
+}
+
+.addendum > p::before {
+	content: "\2139";
+	color:#0065fc;
+	border-radius: 50%;
+	border: thin solid gray;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.fas.fa-info-circle {
+	color:white;
+	background-color:#0065fc;
+	border-radius: 50%;
+	border-color: black;
+	border-width: 1px;
+	box-shadow: 0px 0px 0px 0px grey; 
+}
 #mainbody {
 	display: flex;
 	flex-direction: row;
@@ -221,7 +273,7 @@ section#left {
 	background-color: #f2f2f2;
 	height: auto;
 	border-radius: 25px;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 #left > .label {
@@ -243,6 +295,8 @@ div#Resultats > a {
 	display: block;
 	flex-grow: 1;
 	width: 33%;
+	height: 250px;
+	margin-bottom: 25px;
 }
 
 div#Resultats:nth-child(3n) {
@@ -255,16 +309,15 @@ figure.res {
 	max-width: 100%;
 	height: auto;
 	flex-wrap: wrap;
-	margin: 32px;
 	padding: 3px;
-	box-shadow: 0px 0px 4px 0px #e8e7e6;
+	box-shadow: 0px 4px 5px 0px #e8e7e6;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
 
 figure.res > img {
 	max-width: 100%;
-	max-height: 100px;
+	max-height: 150px;
 	overflow: hidden;
 	object-fit: cover;
 	border-top-right-radius: inherit;
@@ -304,7 +357,11 @@ h4 > p {
 div#Top > a {
 	display: block;
 	overflow: hidden;
-	height: 240px;
+	height: 220px;
+}
+
+div#Top >a:nth-child(3) {
+	margin-bottom: 30px;
 }
 
 section#right {
@@ -326,13 +383,13 @@ figure.sug {
 	flex-grow: 1;
 	overflow: hidden;
 	padding: 3px;
-	box-shadow: 0px 1px 4px 0px #e8e7e6,  1px 1px 4px 0px #e8e7e6, -1px 1px 4px 0px #e8e7e6;
+	box-shadow: 0px 4px 5px 0px #e8e7e6;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
 
 figure.sug > img { 
-	width: 50%;
+	width: 45%;
 	height: 100%;
 	object-fit: cover;
 	border-top-left-radius: inherit;
@@ -357,7 +414,6 @@ figure.sug > figcaption {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	height: 500px;
 	margin: 35px;
 	justify-content: space-around;
 	align-content: space-around;
@@ -424,7 +480,7 @@ figure.att {
 	padding: 0px;
 	margin: 0px;
 	border-radius: 15px;
-	box-shadow: 0px 1px 4px 0px #f2f2f2/*,  1px 1px 4px 0px #f2f2f2, -1px 1px 4px 0px #f2f2f2*/;
+	box-shadow: 0px 4px 5px 0px #f2f2f2;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
@@ -440,7 +496,7 @@ img.att {
 }
 
 figcaption.att {
-	height: 50px;
+	height: 55px;
 	width: 100%;
 	z-index: 1;
 }
@@ -454,20 +510,127 @@ figcaption.att {
 		flex-direction: column-reverse;
 	}
 
-#Top {
+	#Top {
 		flex-direction: row;
+	}
+
+	#icon_container {
+		flex-wrap: wrap;
+	}
+
+	#icon_container > div {
+		width: 45%;
+		margin: 2px;
 	}
 }
 
-@media only screen and (min-width: 1px) and (max-width: 600px) {
+@media only screen and (min-width: 1px) and (max-width: 601px) {
+
+	body {
+		margin: 0px;
+	}
+
 	header {
 		flex-direction: column;
 		align-items: center;
+		position: relative;
+		margin: 0px;
+		margin-bottom: 35px;
 	}
+	header > nav {
+		flex-direction: row;
+		width: 100vw;
+	}
+
+	nav > a {
+		display: block;
+		border-style: none;
+		border-color: white;
+		box-sizing: content-box;
+		padding-top: 0;
+		margin: 0px;
+	}
+
+	nav > a:nth-child(3) {
+		position: absolute;
+		color: #0065fc;
+		top: 4vh;
+		right: 3vw;
+	}
+
+	nav > a:nth-child(-n+2) {
+		padding-top: 30px;
+		width: 50%;
+		height: 30px;
+		color: black;
+		border-bottom: 2px solid #f2f2f2;
+		text-align: center;
+	}
+	nav > a:nth-child(-n+2):hover {
+		border-bottom: 3px solid #0065fc;
+		border-top: 0px none white;
+		color:#0065fc;
+	}
+
+	header > img {
+		width: 30vw;
+		height: auto;
+		align-self: flex-start;
+	}
+
+	#Recherche {
+		padding: 5px;
+	}
+
+	#Recherche > h4 {
+		margin-left: 10px;
+		font-size: 1.6rem;
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+
+	#Recherche > h5 {
+	font-weight: 400;
+	font-size: 1.1rem;
+	margin-top: 10px;
+	margin-left: 10px;
+	}
+
+	#localisation {
+		border: none;
+	}
+
+	#textbox {
+		border: none;
+	}
+
+	#search {
+		border-top: 2px solid #f2f2f2;
+		border-bottom: 2px solid #f2f2f2;
+		margin-left: 15px;
+	}
+
+	#mobilesearch {
+		display: initial;
+		width: 44px;
+		margin-left: 100px;
+	}
+
+	#searchbutton {
+		display: none;
+	}
+
 	#filterbar {
 		flex-wrap: wrap;
 	}
 
+	#filterbar > * {
+		margin-left: 10px;
+	}
+	#filterbar > .label {
+		width: 100%;
+		font-weight: bold;
+	}
 	#mainbody {
 		flex-direction: column-reverse;
 		background-color: white;
@@ -475,6 +638,10 @@ figcaption.att {
 
 	#right {
 		background-color: #f2f2f2;
+	}
+
+	section#left {
+		background-color: white;
 	}
 
 	#Resultats {
@@ -488,9 +655,29 @@ figcaption.att {
 	#icon_container {
 		flex-direction: column;
 		height: auto;
+		margin: 15px;
 	}
 
 	#icon_container > div {
 		height: auto;
+		margin: 0px;
+	}
+
+	figure.att {
+		height: 330px;
+	}
+
+	a.att {
+		margin-bottom: 10px;
+	}
+
+	footer {
+		flex-direction: column;
+		width: 100vw;
+		margin-left: 0px;
+	}
+
+	footer > div {
+		margin-left: 15px;
 	}
 }
