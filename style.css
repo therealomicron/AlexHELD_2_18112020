@@ -242,8 +242,8 @@ figure > i {
 	color:#0065fc;
 	border-radius: 50%;
 	border: thin solid gray;
-	padding-left: 4px;
-	padding-right: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .fas.fa-info-circle {
 	color:white;
@@ -506,8 +506,20 @@ figcaption.att {
 		flex-wrap: wrap;
 	}
 
+	#filterbar > .label {
+		break-after:always;
+	}
+
 	#mainbody {
 		flex-direction: column-reverse;
+	}
+
+	section#right {
+		align-items: center;
+	}
+
+	div#Resultats > a {
+		width: 50%;
 	}
 
 	#Top {
@@ -520,7 +532,7 @@ figcaption.att {
 
 	#icon_container > div {
 		width: 45%;
-		margin: 2px;
+		margin-bottom: 25px;
 	}
 }
 
@@ -631,6 +643,11 @@ figcaption.att {
 		width: 100%;
 		font-weight: bold;
 	}
+
+	.addendum {
+		margin-left: 15px;
+	}
+
 	#mainbody {
 		flex-direction: column-reverse;
 		background-color: white;
@@ -679,5 +696,6 @@ figcaption.att {
 
 	footer > div {
 		margin-left: 15px;
+		margin-bottom: 20px;
 	}
 }
