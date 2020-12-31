@@ -140,7 +140,7 @@ header > img {
 
 #localisation {
 	height: 44px;
-	width: 40px;
+	width: 44px;
 	margin: 0px;
 	padding: 0px;
 	border-top-left-radius: 15px;
@@ -170,12 +170,12 @@ header > img {
 	background-color:#0065fc;
 	color: white;
 	border: none;
+	width: 50px;
 }
 
 ::placeholder {
 	font-weight: bold;
 	color: black;
-	justify-content: center;
 }
 
 #filterbar {
@@ -299,9 +299,6 @@ div#Resultats > a {
 	margin-bottom: 25px;
 }
 
-div#Resultats:nth-child(3n) {
-	break-after: always;
-}
 
 figure.res {
 	display: flex;
@@ -507,7 +504,7 @@ figcaption.att {
 	}
 
 	#filterbar > .label {
-		break-after:always;
+		break-after: page;
 	}
 
 	#mainbody {
@@ -610,26 +607,33 @@ figcaption.att {
 
 	#localisation {
 		border: none;
+		flex-grow: 0;
+		flex-shrink: 0;
 	}
 
 	#textbox {
 		border: none;
+		flex-grow: 1;
+		flex-shrink: 1;
 	}
 
 	#search {
 		border-top: 2px solid #f2f2f2;
 		border-bottom: 2px solid #f2f2f2;
-		margin-left: 15px;
+		align-self: center;
+		width: 97%;
 	}
 
 	#mobilesearch {
 		display: initial;
 		width: 44px;
-		margin-left: 100px;
+		flex-grow: 0;
+		flex-shrink: 0;
 	}
 
 	#searchbutton {
 		display: none;
+		width: 0px;
 	}
 
 	#filterbar {
