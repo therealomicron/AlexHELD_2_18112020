@@ -299,10 +299,12 @@ div#Resultats {
 div#Resultats > a {
 	display: block;
 	flex-grow: 1;
-	width: 33%;
+	width: calc(33% - 20px); 
 	height: 250px;
 	margin-bottom: 25px;
 	padding: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 
@@ -315,7 +317,6 @@ figure.res {
 	box-shadow: 0px 4px 5px 0px #e8e7e6;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
-	width: 90%;
 	margin: 0px;
 }
 
@@ -528,6 +529,10 @@ figcaption.att {
 
 	section#right {
 		align-items: center;
+	}
+
+	section#left {
+		width: 100%;
 	}
 
 	div#Resultats > a {
