@@ -536,7 +536,7 @@ figcaption.att {
 	}
 
 	div#Resultats > a {
-		width: 50%;
+		width: 45%;
 	}
 
 	#Top {
@@ -690,6 +690,7 @@ figcaption.att {
 
 	section#left {
 		background-color: white;
+		width: 100%;
 	}
 
 	#Resultats {
