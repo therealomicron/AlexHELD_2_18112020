@@ -101,6 +101,7 @@ header > img {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-left: 5px;
 }
 
 #Recherche > h4 {
@@ -279,12 +280,15 @@ section#left {
 	border-radius: 25px;
 	justify-content: space-around;
 	width: 90%;
+	margin-left: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #left > .label {
 	display: flex;
 	justify-content: flex-start;
-	padding-left: 35px;
+	margin-left: 10px;
 }
 
 div#Resultats {
@@ -378,6 +382,7 @@ section#right {
 	align-content: space-between;
 	height: inherit;
 	border-radius: 25px;
+	margin-right: 39px;
 }
 
 figure.sug {
@@ -406,8 +411,14 @@ figure.sug > figcaption {
 	height: 100%; 
 	width: 50%;
 	overflow: hidden;
+	position: relative;
+	justify-content: initial;
 }
 
+figure.sug p:nth-child(3) {
+	position: absolute;
+	bottom: 0px;
+}
 #Activities {
 	display: flex;
 	flex-direction: column;
@@ -427,9 +438,13 @@ figure.sug > figcaption {
 }
 
 #Activities > .label {
-	padding-left: 35px;
+	padding-left: 40px;
 	padding-top: 25px;
 
+}
+
+#Activities h3 {
+	font-size: 1.5rem;
 }
 
 a.att {
@@ -533,6 +548,7 @@ figcaption.att {
 
 	section#left {
 		width: 100%;
+		padding: 0px;
 	}
 
 	div#Resultats > a {
@@ -691,6 +707,11 @@ figcaption.att {
 	section#left {
 		background-color: white;
 		width: 100%;
+		padding: 0px;
+	}
+
+	#left > .label {
+		margin-left: 15px;
 	}
 
 	#Resultats {
@@ -699,6 +720,12 @@ figcaption.att {
 
 	div#Resultats > a {
 		width: 100%;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	#Activities > .label {
+		padding-left: 15px;
 	}
 
 	#icon_container {
